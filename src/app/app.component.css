@@ -90,7 +90,12 @@ body {
 }
 
 .empty {
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    margin: 8rem 0 0 0;
+    font-family: "Bitcount Grid Double", system-ui;
+    font-size: 2rem;
 }
 
 .task {
