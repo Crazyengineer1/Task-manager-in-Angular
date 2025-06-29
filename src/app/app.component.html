@@ -11,31 +11,34 @@
 </head>
 
 <body>
-    <div class="heading">
-        <h2>Your own personal task manager made with angular</h2>
-    </div>
-    <div class="add">
-        <form (ngSubmit)="addTask()">
-            <input type="text" [(ngModel)]="taskName" name="task" id="name" placeholder="What you want to do next?">
-            <p>Due date:</p>
-            <input type="date" [(ngModel)]="dueDate" name="date" id="date">
-            <button type="submit">Add Task</button>
-        </form>
-    </div>
-    <div class="taskList">
-        <div class="empty" *ngIf="tasks.length == 0">
-            <h2>No tasks yet, let's get started!</h2>
-        </div>
-        <div class="task" *ngFor="let task of tasks">
-            <input type="checkbox" [(ngModel)]="task.completed" (change)="saveTasks()" />
-            <span class="NameDate" [ngClass]="{'completed': task.completed}">
-                <span class="TN"> {{task.name}}</span>
-                <span class="date"> Due: {{task.date}} </span>
-            </span>
-            <button (click)="deleteTask(task.id)">Delete</button>
-        </div>
-    </div>
+    <div class="main-wrapper">
 
+        <div class="heading">
+            <h2>Your own personal task manager made with angular</h2>
+        </div>
+        <div class="add">
+            <form (ngSubmit)="addTask()">
+                <input type="text" [(ngModel)]="taskName" name="task" id="name" placeholder="What you want to do next?">
+                <p>Due date:</p>
+                <input type="date" [(ngModel)]="dueDate" name="date" id="date">
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+        <div class="taskList">
+            <div class="empty" *ngIf="tasks.length == 0">
+                <h2>No tasks yet, let's get started!</h2>
+            </div>
+            <div class="task" *ngFor="let task of tasks">
+                <input type="checkbox" [(ngModel)]="task.completed" (change)="saveTasks()" />
+                <span class="NameDate" [ngClass]="{'completed': task.completed}">
+                    <span class="TN"> {{task.name}}</span>
+                    <span class="date"> Due: {{task.date}} </span>
+                </span>
+                <button (click)="deleteTask(task.id)">Delete</button>
+            </div>
+        </div>
+
+    </div>
 </body>
 
 </html>

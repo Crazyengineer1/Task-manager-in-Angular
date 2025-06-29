@@ -1,7 +1,6 @@
-html,
-body {
+.main-wrapper {
     /* border: 2px solid rgb(0, 128, 255); */
-    min-height: 100%;
+    min-height: calc(100vh - 1rem);
     background: linear-gradient(to left, rgb(226, 142, 45), rgb(172, 129, 251), rgb(42, 217, 240));
     background-size: 300% auto;
     background-position: right center;
