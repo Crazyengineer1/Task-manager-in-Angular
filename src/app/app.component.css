@@ -1,0 +1,133 @@
+html,
+body {
+    /* border: 2px solid rgb(0, 128, 255); */
+    min-height: 100%;
+    background: linear-gradient(to left, rgb(226, 142, 45), rgb(172, 129, 251), rgb(42, 217, 240));
+    background-size: 300% auto;
+    background-position: right center;
+    animation: BGchange1 15s infinite alternate;
+}
+
+@keyframes BGchange1 {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.heading {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+}
+
+.heading h2 {
+    /* border: 2px solid green; */
+    display: inline;
+    margin: 1rem 0;
+    font-family: "Sevillana", cursive;
+    /* color: #3a0080; */
+    color: white;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-shadow: 0.4rem 0.4rem 0.5rem rgb(181, 19, 181);
+}
+
+.add {
+    /* border: 2px solid blue; */
+    display: inline-block;
+    width: calc(100% - 2rem);
+    margin: 1rem 0;
+    padding: 0.8rem 0 0.8rem 2rem;
+    /* padding: 0.8rem; */
+}
+
+
+#name {
+    width: 60%;
+    padding: 1.2vh 0;
+    font-size: 1rem;
+    border-radius: 0.8rem;
+}
+
+.add p {
+    display: inline;
+    margin: 0 0.6rem 0 5.4rem;
+    font-size: 1.2rem;
+}
+
+#date {
+    padding: 1.2vh 0.2vw;
+    font-size: 1rem;
+}
+
+.add button {
+    padding: 1.2vh 0.8vw;
+    border: none;
+    border-radius: 4rem;
+    font-size: 1rem;
+    position: absolute;
+    right: 2.5rem;
+    background-color: rgb(101, 244, 127);
+    transition: all 0.4s;
+}
+
+.add button:hover {
+    background-color: rgb(0, 223, 59);
+    cursor: pointer;
+}
+
+.taskList {
+    /* border: 2px solid white; */
+    margin: 2rem 0;
+}
+
+.empty {
+    border: 2px solid black;
+}
+
+.task {
+    /* border: 2px solid red; */
+    margin: 1rem 0;
+    padding: 1rem 2.5rem 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    background-color: aliceblue;
+    border-radius: 1.2rem;
+}
+
+.NameDate {
+    /* border: 2px solid black; */
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+}
+
+.task button {
+    padding: 0.2rem 0.5rem;
+    font-size: 1.2rem;
+    background-color: rgb(255, 58, 58);
+    color: white;
+    border: none;
+    border-radius: 0.4rem;
+    transition: all 0.5s;
+}
+
+.task button:hover {
+    cursor: pointer;
+    background-color: rgb(205, 0, 0);
+}
+
+.completed {
+    color: gray;
+    text-decoration: line-through;
+}
