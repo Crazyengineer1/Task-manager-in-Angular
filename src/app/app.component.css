@@ -59,7 +59,7 @@
 }
 
 .add p {
-    display: inline;
+    display: inline-block;
     margin: 0 0.6rem 0 5.4rem;
     font-size: 1.2rem;
 }
@@ -67,6 +67,7 @@
 #date {
     padding: 1.2vh 0.2vw;
     font-size: 1rem;
+    border-radius: 0.8rem;
 }
 
 .add button {
@@ -136,4 +137,39 @@
 .completed {
     color: gray;
     text-decoration: line-through;
+}
+
+@media screen and (max-width:600px) {
+    .add {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px solid red; */
+    }
+
+
+    #name {
+        width: calc(100% - 2rem);
+        display: inline-block;
+        margin: 0 0 1rem 0;
+    }
+
+    .add p {
+        margin: 0;
+    }
+
+    #date {
+        display: inline;
+        width: calc(100% - 2rem);
+        margin: 0 0 1.5rem 0;
+    }
+
+    .add button {
+        /* border: 2px solid red; */
+        display: block;
+        position: static;
+        margin: 0 auto;
+        text-align: center;
+    }
 }
